@@ -17,6 +17,8 @@
 global:
   name: free5gc
   userPlaneArchitecture: single  # possible values are "single" and "ulcl"
+  assignNodeCore: kind-worker
+  assignNodeMec1: kind-worker2
   nrf:
     service:
       name: nrf-nnrf

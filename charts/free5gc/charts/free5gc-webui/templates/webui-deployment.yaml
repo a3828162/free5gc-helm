@@ -38,6 +38,7 @@ spec:
         project: {{ $.Values.global.projectName }}
         nf: {{ .name }}
     spec:
+      nodeName: kind-worker
       imagePullSecrets:
         {{- toYaml .imagePullSecrets | nindent 8 }}
       securityContext:
@@ -94,10 +95,6 @@ spec:
             port: {{ .service.port }}
       dnsPolicy: ClusterFirst
       restartPolicy: Always
-      nodeSelector:
-        {{- toYaml .nodeSelector | nindent 8 }}
-      affinity:
-        {{- toYaml .affinity | nindent 8 }}
       tolerations:
         {{- toYaml .tolerations | nindent 8 }}
 
