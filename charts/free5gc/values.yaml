@@ -124,3 +124,5 @@ mongodb:
     type: ClusterIP
     port: 27017
     nodePort: "30017"
+  spec:
+    nodeName: kind-worker

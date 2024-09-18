@@ -5,6 +5,7 @@ metadata:
   labels:
     project: free5gc
 spec:
+  nodeName: kind-worker
   capacity:
     storage: 8Gi
   accessModes:
